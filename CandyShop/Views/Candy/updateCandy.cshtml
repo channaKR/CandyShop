@@ -1,0 +1,28 @@
+﻿@model CandyShop.Models.UpdateCandyViewModel
+@{
+}
+<h3>Update candys</h3>
+
+<form method="post" action="updateCandy">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="Id" placeholder="Enter your name" asp-for="Id" readonly>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" asp-for="Name">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" rows="3" placeholder="Enter a description" asp-for="Description "></textarea>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Enter the price" asp-for="Price">
+    </div>
+    <div class="form-group">
+        <label for="add-date">Add Date</label>
+        <input type="date" class="form-control" id="add-date" asp-for="addDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

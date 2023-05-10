@@ -1,0 +1,32 @@
+﻿@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Add Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach(var candy in Model){
+        <tr>
+            <td>@candy.Id</td>
+            <td>@candy.Name</td>
+            <td>@candy.Description</td>
+            <td>@candy.Price</td>
+            <td>@candy.addDate.ToString("dd-MM-yyy")</td>
+            <td>
+                    <a href="Candy/viewCandy/@candy.Id" class="btn btn-primary">View!</a>
+
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+        }
+        <!-- Add more rows here -->
+    </tbody>
+</table>
